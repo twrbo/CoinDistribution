@@ -1,2 +1,2 @@
 # CoinDistribution
-Contribute money.
+Using smart contract to distribute money.
