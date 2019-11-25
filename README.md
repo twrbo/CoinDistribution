@@ -1,0 +1,2 @@
+# CoinDistribution
+Contribute money.
