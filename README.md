@@ -51,7 +51,7 @@ modifier OnlyMember(){
 ```
 - The modifier is usually used as checks before executing functions and check if the user's permissions or balance are sufficient.
 - `_;` must be declared at the end of modifier to indicate return.
----
+
 
 ## Function details
 
@@ -68,6 +68,7 @@ As long as the function is related to cryptocurrency transactions, it belong to 
 Blue means **Call** type.
 
 **Not Payable** and **Payable** types must pay gas to initiate the transaction except **Call** type.
+
 ---
 
 ### Add multiple member accounts
