@@ -20,8 +20,7 @@ contract CoinDistribution{
         if (accounts.length==0){
             require(msg.sender==owner,"Member only!");
         }
-        else    
-        {
+        else{
             for(uint i=0; i<accounts.length;i++){
                 require(msg.sender==accounts[i] || msg.sender==owner,"Member only!"); 
             }
