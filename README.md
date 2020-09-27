@@ -13,7 +13,7 @@ pragma solidity >=0.4.22 <0.6.0;
 ```
 
 - Set compiler version.
-
+---
 
 ### Variables
 ```javascript
@@ -27,7 +27,7 @@ uint PriceLimit=100 ether;
 - `address` is a type to store address.
 - `mapping` is a type to transform type and store hash value.
 - `payable` means it is permitted to transfer cryptocurrency.
-
+---
 
 ### Modifier
 
@@ -51,7 +51,7 @@ modifier OnlyMember(){
 ```
 - The modifier is usually used as checks before executing functions and check if the user's permissions or balance are sufficient.
 - `_;` must be declared at the end of modifier to indicate return.
-
+---
 
 ## Function details
 
@@ -68,6 +68,7 @@ As long as the function is related to cryptocurrency transactions, it belong to 
 Blue means **Call** type.
 
 **Not Payable** and **Payable** types must pay gas to initiate the transaction except **Call** type.
+---
 
 ### Add multiple member accounts
 ![](https://i.imgur.com/aY6uGz1.png)
@@ -95,7 +96,7 @@ function _AddAccount(address payable[]memory _accountAddress) OnlyOwner public {
 - The owner can add multiple members by entering their addresses.
 - Input format: `["0xFF","...","0xFF"]`
 
-
+---
 ### Remove a member account
 ![](https://i.imgur.com/sh2DOXf.png)
 
@@ -118,9 +119,7 @@ function _RemoveAccount(address _accountAddress) OnlyOwner public {
 ```
 - The owner can delete a member by entering his address.
 - Input format: `0xFF`
-
-
-
+---
 
 ### Remove all member accounts
 ![](https://i.imgur.com/z1NgBxT.png)
@@ -139,9 +138,7 @@ function _RemoveAllAccount() OnlyOwner public {
 ```
 - The owner can delete all the members.
 
-
-
-
+---
 
 ### Withdraw all the cryptocurrency
 ![](https://i.imgur.com/N1A79Ty.png)
@@ -156,9 +153,7 @@ function _ReturnAllMoney()public payable OnlyOwner{
 
 - The owner can withdraw all the cryptocurrency.
 
-
-
-
+---
 
 ### Split the cryptocurrency
 ![](https://i.imgur.com/k7dCZMG.png)
@@ -176,8 +171,7 @@ function _SplitAllMoney()public payable OnlyOwner{
 
 - The owner can split the cryptocurrency to each member equally.
 
-
-
+---
 
 ### Join the membership yourself
 ![](https://i.imgur.com/S0T2Pr5.png)
@@ -199,8 +193,7 @@ function AddYourAccountOnly () public{
 ```
 - Everyone can join the membership yourself.
 
-
-
+---
 
 ### Delete the membership yourself
 ![](https://i.imgur.com/s8RSvQ2.png)
@@ -225,8 +218,7 @@ function DeleteYourAccountOnly() public{
 ```
 - Everyone can delete the membership yourself.
 
-
-
+---
 
 ### Deposit the cryptocurrency
 ![](https://i.imgur.com/Sc1jHxc.png)
@@ -240,8 +232,7 @@ function Deposit() public payable{
 ```
 - Everyone can deposit the cryptocurrency into smart contract.
 
-
-
+---
 
 ### Get all the member accounts
 ![](https://i.imgur.com/5PgqMQK.png)
@@ -255,8 +246,7 @@ function GetAllAccountID()public OnlyMember view returns(address payable[] memor
 ```
 - The members can view all the membership's ID.
 
-
-
+---
 
 ### Get the balance from the smart contract
 ![](https://i.imgur.com/FFy3Fz7.png)
@@ -269,8 +259,7 @@ function GetBalance() public OnlyMember view returns(uint)  {
 }
 ```
 - The members can view all the balance from the smart contract.
-
-
+---
 
 ### Get the number of members
 ![](https://i.imgur.com/2zcezru.png)
